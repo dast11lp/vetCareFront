@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as v;
+
+.my-pets {
+}
+
+.table {
+    width: 100%;
+    border-spacing: 30px 20px;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    border-radius: 6px;
+    background-color: v.$color--secundary;
+}
+
+.pet-photo {
+    display: block;
+    margin: 0 auto;
+    // max-width: 150px; /* Limita el ancho máximo de la imagen a 150px */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Establece el ancho de la columna de la imagen */
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 150px;
+    height: 100px;
+}
+
+.manager {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+
+
+.css-1wy8uaa-MuiButtonBase-root-MuiPickersDay-root {
+    font-size: 50px;
+}
