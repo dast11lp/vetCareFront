@@ -14,9 +14,9 @@ const ServiceInfo = () => {
     );
 
     return (
-        <div>
-            <h2>{service?.title}</h2>
-            <p>{service?.paragraph}</p>
+        <div className="services-info">
+            <h2 className="service-title">{service?.title}</h2>
+            <p className="">{service?.paragraph}</p>
         </div>
     )
 }

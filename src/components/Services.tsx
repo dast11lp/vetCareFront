@@ -11,7 +11,7 @@ export const Services: React.FC = () => {
 
   return (
     <div className="services">
-      <h2> Services </h2>
+      <h2> Servicios </h2>
       <div className="services__content">
         {services.map((el, i) => (
           <Link to={`/servicios/${el.id}`} key={i}>
