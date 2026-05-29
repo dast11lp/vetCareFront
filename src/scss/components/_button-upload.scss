@@ -1,0 +1,24 @@
+@use './../abstracts/variables' as v;
+
+
+
+.btn-upload {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid v.$color--quintenary--dark;
+    border-radius: 12px;
+    height: 42px;
+    width: 300px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: v.$color--quintenary--dark;
+    background-color: v.$color--primary;
+    transition: all .2s ease-in;
+    font-size: 1.4rem;
+
+    &:hover {
+        background-color: v.$color--quintenary--dark;
+        color: v.$color--primary;
+    }
+}

@@ -9,7 +9,7 @@ export const MyPets = () => {
 
   const dispatch = useAppDispatch();
 
-  const petList = useSelector((state:RootState) => state.petReducer.petList)
+  const petList = useSelector((state: RootState) => state.petReducer.petList)
 
   const location = useLocation()
 
@@ -40,13 +40,13 @@ export const MyPets = () => {
             {petList && petList.map((pet, key) => (
               <tr key={key}>
                 <td>{pet.id}</td>
-                <td><img className="pet-photo" src="https://cdn.pixabay.com/photo/2023/11/30/07/04/shetland-sheepdog-8420917_1280.jpg" alt="Pet Photo" /></td>
+                <td><img className="pet-photo" src={pet.image ?? '/default-pet.png'} alt="Pet Photo" /></td>
                 <td>{pet.name}</td>
                 <td className="manager">
                   <Link to="">Perfil</Link>
                   <Link to={`/citas/${pet.id}/${pet.name}`}>Citas Agendadas</Link>
                   <Link to={`/agendarcita/${pet.id}`}>Agendar Cita</Link>
-                  </td>
+                </td>
               </tr>
             ))}
           </tbody>
