@@ -18,9 +18,6 @@ export const CarouselSlide: React.FC<Props> = ({ content }) => {
                     <CarouselCard content={el} key={i}/>
                 ))
             }
-
-            {/* <CarouselCard />
-            <CarouselCard /> */}
         </div>
     )
 }

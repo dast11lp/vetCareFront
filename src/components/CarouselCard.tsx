@@ -1,21 +1,23 @@
-import cat from '../assets/img/cat.png'
+import React from 'react';
+import { CardSliderContent } from '../types/CardSliderContent';
+import { Link } from 'react-router-dom';
 
-export const CarouselCard = ({content}) => {
+interface Props {
+    content: CardSliderContent
+}
 
-    console.log("que está lelgando acá?", content);
-    
-
+export const CarouselCard: React.FC<Props> = ({ content }) => {
     return (
         <div className="card-carousel">
             <div className="card-carousel__content">
                 <h3 className="card-carousel__content__title">{content.title}</h3>
-                <p className="card-carousel__content__pg">
-                    {content.resume}
-                </p>
-                <a href="">Read more</a>
+                <p className="card-carousel__content__pg">{content.resume}</p>
+                <Link className="card-carousel__content__link" to="/servicios">
+                    Saber más <span className="card-carousel__content__arrow">→</span>
+                </Link>
             </div>
-            <div className='card-carousel__image'>
-                <img className="card-carousel__image__img" src={cat} alt="cat" />
+            <div className="card-carousel__image">
+                <img className="card-carousel__image__img" src={content.image} alt={content.title} />
             </div>
         </div>
     )
