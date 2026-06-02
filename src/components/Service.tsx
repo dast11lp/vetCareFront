@@ -13,7 +13,7 @@ const Service: React.FC<Props> = ({ img, nameService }) => {
       </div>
       <div className='service__body'>
         <p className='service__name'>{nameService}</p>
-        <span className='service__cta'>Agendar →</span>
+        <span className='service__cta'>Ver →</span>
       </div>
     </div>
   )
